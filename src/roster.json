@@ -1,0 +1,39 @@
+{
+  "coaches": [
+    {
+      "name": "Head Coach Name",
+      "position": "Head Coach",
+      "role": "head",
+      "image": ""
+    },
+    {
+      "name": "Asst. Coach 1",
+      "position": "Assistant Coach",
+      "role": "assistant",
+      "image": ""
+    },
+    {
+      "name": "Asst. Coach 2",
+      "position": "Assistant Coach",
+      "role": "assistant",
+      "image": ""
+    },
+    {
+      "name": "Asst. Coach 3",
+      "position": "Assistant Coach",
+      "role": "assistant",
+      "image": ""
+    }
+  ],
+  "players": [
+    { "name": "Player One", "number": "10", "position": "Guard", "image": "" },
+    { "name": "Player Two", "number": "12", "position": "Guard", "image": "" },
+    { "name": "Player Three", "number": "15", "position": "Forward", "image": "" },
+    { "name": "Player Four", "number": "21", "position": "Forward", "image": "" },
+    { "name": "Player Five", "number": "23", "position": "Center", "image": "" },
+    { "name": "Player Six", "number": "30", "position": "Guard", "image": "" },
+    { "name": "Player Seven", "number": "32", "position": "Forward", "image": "" },
+    { "name": "Player Eight", "number": "44", "position": "Center", "image": "" },
+    { "name": "Player Nine", "number": "50", "position": "Guard", "image": "" }
+  ]
+}
