@@ -1,39 +1,19 @@
 {
   "coaches": [
-    {
-      "name": "Head Coach Name",
-      "position": "Head Coach",
-      "role": "head",
-      "image": ""
-    },
-    {
-      "name": "Asst. Coach 1",
-      "position": "Assistant Coach",
-      "role": "assistant",
-      "image": ""
-    },
-    {
-      "name": "Asst. Coach 2",
-      "position": "Assistant Coach",
-      "role": "assistant",
-      "image": ""
-    },
-    {
-      "name": "Asst. Coach 3",
-      "position": "Assistant Coach",
-      "role": "assistant",
-      "image": ""
-    }
+    { "name": "Marcus Thompson", "position": "Head Coach", "image": "" },
+    { "name": "Sarah Jenkins", "position": "Assistant Coach", "image": "" },
+    { "name": "David Rivers", "position": "Assistant Coach", "image": "" },
+    { "name": "Elena Rodriguez", "position": "Assistant Coach", "image": "" }
   ],
   "players": [
-    { "name": "Player One", "number": "10", "position": "Guard", "image": "" },
-    { "name": "Player Two", "number": "12", "position": "Guard", "image": "" },
-    { "name": "Player Three", "number": "15", "position": "Forward", "image": "" },
-    { "name": "Player Four", "number": "21", "position": "Forward", "image": "" },
-    { "name": "Player Five", "number": "23", "position": "Center", "image": "" },
-    { "name": "Player Six", "number": "30", "position": "Guard", "image": "" },
-    { "name": "Player Seven", "number": "32", "position": "Forward", "image": "" },
-    { "name": "Player Eight", "number": "44", "position": "Center", "image": "" },
-    { "name": "Player Nine", "number": "50", "position": "Guard", "image": "" }
+    { "name": "Marcus Knight", "number": "12", "position": "Forward", "height": "6'5\"", "year": "JR", "ppg": "14.2", "rpg": "8.5", "apg": "2.1", "spg": "1.2", "bpg": "1.5" },
+    { "name": "Jalen Swift", "number": "04", "position": "Point Guard", "height": "5'11\"", "year": "SO", "ppg": "10.5", "rpg": "2.3", "apg": "6.8", "spg": "2.5", "bpg": "0.1" },
+    { "name": "Andre Reed", "number": "33", "position": "Center", "height": "6'9\"", "year": "SR", "ppg": "9.8", "rpg": "12.4", "apg": "1.1", "spg": "0.5", "bpg": "3.2" },
+    { "name": "Leo Banks", "number": "21", "position": "Shooting Guard", "height": "6'2\"", "year": "FR", "ppg": "12.0", "rpg": "3.1", "apg": "2.5", "spg": "1.1", "bpg": "0.3" },
+    { "name": "Derrick Owens", "number": "10", "position": "Forward", "height": "6'4\"", "year": "JR", "ppg": "7.5", "rpg": "5.2", "apg": "3.0", "spg": "0.8", "bpg": "0.6" },
+    { "name": "Chris Gordon", "number": "01", "position": "Point Guard", "height": "6'0\"", "year": "SO", "ppg": "8.4", "rpg": "2.1", "apg": "5.2", "spg": "1.9", "bpg": "0.0" },
+    { "name": "Tyrell Johnson", "number": "24", "position": "Center", "height": "6.10\"", "year": "JR", "ppg": "6.2", "rpg": "10.1", "apg": "0.8", "spg": "0.4", "bpg": "2.8" },
+    { "name": "Sam Miller", "number": "02", "position": "Shooting Guard", "height": "6'3\"", "year": "SR", "ppg": "15.1", "rpg": "4.2", "apg": "2.0", "spg": "1.3", "bpg": "0.2" },
+    { "name": "Kevin Durant II", "number": "35", "position": "Forward", "height": "6'7\"", "year": "FR", "ppg": "11.7", "rpg": "6.4", "apg": "1.5", "spg": "0.9", "bpg": "1.1" }
   ]
 }

@@ -1,39 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- 
-    <title>Blue Knights Basketball</title>
-  </head>
-  <body>
-    <header id="header">
-      <div class="header-left">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Blue Knights | Official Roster</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img id="logo" src="" alt="Blue Knights Logo">
+        </div>
         <h1>Blue Knights</h1>
-      </div>
-      <div class="header-right">
-        <img id="logo" />
-      </div>
+        <p>Basketball Program</p>
     </header>
 
-    <div class="break"></div>
+    <div class="container">
+        <h2>Coaching Staff</h2>
+        <div id="coaches-container" class="coach-grid"></div>
 
-    <main>
-      <section class="team-section">
-        <h2 class="section-title">Coaches</h2>
-        <div id="coaches-container"></div>
-      </section>
-
-      <hr class="divider" />
-
-      <section class="team-section">
-        <h2 class="section-title">Players</h2>
-        <div id="player-container"></div>
-      </section>
-    </main>
-
-    <footer id="footer">
-      <p>&copy; 2026 Blue Knights Basketball</p>
+        <h2>Player Roster</h2>
+        <div id="player-container" class="player-grid"></div>
+    </div>
+<footer class="main-footer">
+        <div class="footer-content">
+            <h3>Blue Knights</h3>
+            <p>Developing character, teamwork, and excellence.</p>
+            <div class="footer-links">
+                <a href="mailto:coach@blueknights.com">Email Coach</a>
+                <a href="#">Team Schedule</a>
+            </div>
+            <div class="copyright">
+                © 2026 Blue Knights Basketball
+            </div>
+        </div>
     </footer>
-  </body>
+    <script src="./index.js"></script>
+</body>
 </html>

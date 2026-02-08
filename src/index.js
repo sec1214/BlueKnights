@@ -1,67 +1,51 @@
 import roster from "./roster.json";
-import style from "./styles.css";
+import "./styles.css";
 import olgcLogo from "./assets/images/blueKnightBasketballPlayer.jpg";
 
 const logo = document.getElementById("logo");
-logo.src = olgcLogo;
+if (logo) logo.src = olgcLogo;
 
-const coachesContainer = document.getElementById("coaches-container");
-const playerContainer = document.getElementById("player-container");
+const renderMember = (member, containerId, isPlayer) => {
+  const container = document.getElementById(containerId);
+  if (!container) return;
 
-const img = document.createElement("img");
-
-img.classList.add("coach-photo"); // This "hooks" the CSS we just wrote
-
-roster.coaches.forEach((coach) => {
   const card = document.createElement("div");
-  card.classList.add("coach-card");
+  card.className = `card ${isPlayer ? "is-flippable" : ""}`;
 
-  // 1. Determine the correct image source
-  const imgSrc = coach.image
-    ? `./assets/images/${coach.image}`
-    : `https://ui-avatars.com/api/?name=${encodeURIComponent(coach.name)}&background=6699CC&color=fff`;
+  if (isPlayer) {
+    card.addEventListener("click", function() {
+      this.classList.toggle("is-flipped");
+    });
+  }
 
-  // 2. Build the card structure
-  // We use the imgSrc variable we just created inside the <img> tag
+  const avatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=${isPlayer ? 'FFD700' : '003366'}&color=001f3f&size=200`;
+
   card.innerHTML = `
-    <img src="${imgSrc}" alt="${coach.name}" class="coach-photo">    
-    <h3>${coach.name}</h3>
-    <p>${coach.position}</p>
+    <div class="card-inner">
+      <div class="card-front">
+        <div class="card-image-circle">
+          <img src="${member.image || avatar}" alt="${member.name}">
+        </div>
+        <h3 style="font-family:'Bebas Neue'; font-size:1.5rem;">${member.name}</h3>
+        <span class="position-badge" style="font-size:0.7rem; text-transform:uppercase; font-weight:800; color:var(--secondary);">${member.position}</span>
+        ${isPlayer ? `<p style="margin-top:10px; font-weight:900; color:#ccc; font-size:1.2rem;">#${member.number}</p>` : ''}
+      </div>
+      
+      ${isPlayer ? `
+      <div class="card-back">
+        <h3 style="color:var(--accent); font-family:'Bebas Neue'; font-size:1.8rem; margin-bottom:5px;">Stats</h3>
+        <div style="width:100%">
+          <div class="stat-row"><span class="stat-label">PTS</span><span>${member.ppg}</span></div>
+          <div class="stat-row"><span class="stat-label">REB</span><span>${member.rpg}</span></div>
+          <div class="stat-row"><span class="stat-label">AST</span><span>${member.apg}</span></div>
+          <div class="stat-row"><span class="stat-label">STL</span><span>${member.spg}</span></div>
+          <div class="stat-row"><span class="stat-label">BLK</span><span>${member.bpg}</span></div>
+        </div>
+      </div>` : ''}
+    </div>
   `;
+  container.appendChild(card);
+};
 
-  coachesContainer.appendChild(card);
-});
-
-
-for (const player of roster.players) {
-  const card = document.createElement("div");
-  card.classList.add("player-card");
-
-  // 1. Create and handle the Image
-  const playerImage = document.createElement("img");
-  // If no image, use a placeholder that fits our blue/white theme
-  playerImage.src = player.image 
-    ? `./assets/images/${player.image}` 
-    : `https://ui-avatars.com/api/?name=${encodeURIComponent(player.name)}&background=002144&color=fff&size=256`;
-  playerImage.alt = player.name;
-
-  // 2. Create the Text Elements
-  const nameDisplay = document.createElement("h2");
-  nameDisplay.textContent = player.name;
-
-  const numberDisplay = document.createElement("p");
-  numberDisplay.classList.add("player-number");
-  numberDisplay.textContent = `#${player.number}`;
-
-  const playerPosition = document.createElement("p");
-  playerPosition.classList.add("player-pos");
-  playerPosition.textContent = player.position;
-
-  // 3. Append in "Trading Card" order (Image on top!)
-  card.appendChild(playerImage);
-  card.appendChild(nameDisplay);
-  card.appendChild(numberDisplay);
-  card.appendChild(playerPosition);
-
-  playerContainer.appendChild(card);
-}
+roster.coaches.forEach(c => renderMember(c, "coaches-container", false));
+roster.players.forEach(p => renderMember(p, "player-container", true));
