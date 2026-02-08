@@ -1,15 +1,27 @@
-<head><script defer src="main.js"></script></head><header>
-    <div class="logo-container">
-        <img id="logo" alt="Blue Knights Logo">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Knights Roster</title>
+<script defer src="main.js"></script></head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img id="logo" src="" alt="Blue Knights Logo">
+        </div>
+        <h1>Blue Knights</h1>
+        <p>Basketball Program</p>
+    </header>
+
+    <div class="container">
+        <h2>Coaching Staff</h2>
+        <div id="coaches-container" class="coach-grid"></div>
+
+        <h2>Player Roster</h2>
+        <div id="player-container" class="player-grid"></div>
     </div>
-    <h1>Blue Knights</h1>
-    <p>2026 Season Roster</p>
-</header>
 
-<div class="container">
-    <h2>Coaches</h2>
-    <div id="coaches-container" class="coach-grid"></div>
-
-    <h2>Players</h2>
-    <div id="player-container" class="player-grid"></div>
-</div>
+    <script src="./index.js"></script>
+</body>
+</html>
